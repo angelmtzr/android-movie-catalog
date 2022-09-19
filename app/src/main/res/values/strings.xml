@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movie Catalog</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+</resources>
