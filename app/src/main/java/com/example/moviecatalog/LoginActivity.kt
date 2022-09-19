@@ -27,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (auth.currentUser == null) return
+        Toast.makeText(this, "Already authenticated.", Toast.LENGTH_LONG).show()
         startActivity(Intent(this, MovieListActivity::class.java))
         finish()
     }
@@ -36,9 +37,7 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<TextView>(R.id.txtEditPassword).text.toString()
 
         if (email == "" || password == "") {
-            Toast.makeText(
-                this,
-                "Make sure to enter an email and password.",
+            Toast.makeText(this, "Make sure to enter an email and password.",
                 Toast.LENGTH_LONG).show()
             return
         }
@@ -46,17 +45,12 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(
-                        this,
-                        "Welcome back!",
-                        Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Welcome back!", Toast.LENGTH_LONG).show()
                     startActivity(Intent(this, MovieListActivity::class.java))
                     finish()
                 }
                 else {
-                    Toast.makeText(
-                        this,
-                        "Failed to authenticate. Please try again.",
+                    Toast.makeText(this, "Failed to authenticate. Please try again.",
                         Toast.LENGTH_LONG).show()
                 }
 

@@ -4,4 +4,9 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="go_back_to_login">Go Back To Login</string>
+    <string name="genre">Genre:</string>
+    <string name="movie_title_sample">Star Wars</string>
+    <string name="movie_year_sample">1977</string>
+    <string name="movie_genre_sample">sci-fi</string>
 </resources>

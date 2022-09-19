@@ -11,7 +11,7 @@
         android:id="@+id/txtLoginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/bree_serif"
         android:text="@string/app_name"
         android:textColor="@color/white"
