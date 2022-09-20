@@ -3,14 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/CIAC1/AndroidStudioProjects/movie-catalog/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/CIAC1/AndroidStudioProjects/movie-catalog/app/src/main/res/layout/activity_movie_list.xml" value="0.47627416520210897" />
-        <entry key="..\:/Users/CIAC1/AndroidStudioProjects/movie-catalog/app/src/main/res/layout/movie.xml" value="0.67" />
         <entry key="..\:/Users/CIAC1/Downloads/MovieCatalog/app/src/main/res/drawable/rounded_corner.xml" value="0.3665" />
         <entry key="..\:/Users/CIAC1/Downloads/MovieCatalog/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/font/avenir.xml" value="0.1574074074074074" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.5332791137695313" />
-        <entry key="app/src/main/res/layout/activity_movie_list.xml" value="0.11666666666666667" />
+        <entry key="app/src/main/res/layout/activity_movie_list.xml" value="0.2543822146216332" />
+        <entry key="app/src/main/res/layout/movie.xml" value="0.37598335959694584" />
       </map>
     </option>
   </component>

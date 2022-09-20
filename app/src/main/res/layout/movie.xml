@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:background="@color/dark"
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,20 +12,27 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/txtMovieTitle"
+            android:id="@+id/txtMovieName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:gravity="center_horizontal"
-            android:text="@string/movie_title_sample" />
+            android:fontFamily="@font/bree_serif"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:text="@string/movie_title_sample"
+            android:textColor="@color/semi_white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtMovieYear"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:gravity="center_horizontal"
-            android:text="@string/movie_year_sample" />
+            android:layout_height="match_parent"
+            android:fontFamily="@font/bree_serif"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:text="@string/movie_year_sample"
+            android:textColor="@color/semi_white"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -34,17 +43,23 @@
         <TextView
             android:id="@+id/txtMovieGenreLabel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:gravity="center_horizontal"
-            android:text="@string/genre" />
+            android:layout_height="match_parent"
+            android:fontFamily="@font/bree_serif"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:text="@string/genre"
+            android:textColor="@color/semi_white"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/txtMovieGenre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:gravity="center_horizontal"
-            android:text="@string/movie_genre_sample" />
+            android:layout_height="match_parent"
+            android:fontFamily="@font/bree_serif"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:text="@string/movie_genre_sample"
+            android:textColor="@color/semi_white"
+            android:textSize="16sp" />
     </LinearLayout>
 </LinearLayout>

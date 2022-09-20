@@ -9,4 +9,5 @@
     <string name="movie_title_sample">Star Wars</string>
     <string name="movie_year_sample">1977</string>
     <string name="movie_genre_sample">sci-fi</string>
+    <string name="add_new_movie">Add new movie</string>
 </resources>
