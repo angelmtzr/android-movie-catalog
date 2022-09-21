@@ -19,16 +19,14 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         auth = Firebase.auth
-
         findViewById<Button>(R.id.btnLogin).setOnClickListener { signIn() }
-
     }
 
     override fun onStart() {
         super.onStart()
         if (auth.currentUser == null) return
         Toast.makeText(this, "Already authenticated.", Toast.LENGTH_LONG).show()
-        startActivity(Intent(this, MovieListActivity::class.java))
+        startActivity(Intent(this, MovieCatalogActivity::class.java))
         finish()
     }
 
@@ -46,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Welcome back!", Toast.LENGTH_LONG).show()
-                    startActivity(Intent(this, MovieListActivity::class.java))
+                    startActivity(Intent(this, MovieCatalogActivity::class.java))
                     finish()
                 }
                 else {

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MovieCatalog"
         tools:targetApi="31">
         <activity
-            android:name=".MovieListActivity"
+            android:name=".MovieCatalogActivity"
             android:launchMode="singleInstance"
             android:exported="false" />
         <activity

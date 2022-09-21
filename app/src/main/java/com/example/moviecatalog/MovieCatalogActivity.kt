@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import com.example.moviecatalog.movie.Movie
 import com.example.moviecatalog.movie.MovieListAdapter
 import com.google.firebase.auth.FirebaseAuth
@@ -18,7 +19,7 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class MovieListActivity : AppCompatActivity() {
+class MovieCatalogActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private val database = Firebase.database
@@ -26,11 +27,14 @@ class MovieListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_movie_list)
+        setContentView(R.layout.activity_movie_catalog)
+
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         auth = Firebase.auth
 
-        findViewById<ImageView>(R.id.btnHome).setOnClickListener { goBackToLogin() }
+        // findViewById<ImageView>(R.id.btnHome).setOnClickListener { goBackToLogin() }
+        // findViewById<ListView>(R.id.listMovies).setOnItemClickListener { adapterView, view, i, l -> }
 
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -42,7 +46,7 @@ class MovieListActivity : AppCompatActivity() {
                         child.child("genre").value.toString())
                     movies.add(movie)
                 }
-                val movieListAdapter = MovieListAdapter(this@MovieListActivity, movies)
+                val movieListAdapter = MovieListAdapter(this@MovieCatalogActivity, movies)
                 findViewById<ListView>(R.id.listMovies).adapter = movieListAdapter
             }
 

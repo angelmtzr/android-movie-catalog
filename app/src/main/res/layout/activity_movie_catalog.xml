@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark"
     android:orientation="vertical"
-    tools:context=".MovieListActivity">
+    tools:context=".MovieCatalogActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -15,36 +15,9 @@
         android:background="@color/light_blue"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@id/listMovies"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:contentDescription="@string/go_back_to_login"
-            android:padding="8dp"
-            app:srcCompat="@android:drawable/ic_menu_revert"
-            app:tint="@color/semi_white"
-            tools:ignore="ImageContrastCheck"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="11dp" />
-
-        <TextView
-            android:id="@+id/txtMovieListTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/bree_serif"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:text="@string/app_name"
-            android:textColor="@color/semi_white"
-            android:textSize="36sp"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="7dp" />
-
-    </androidx.appcompat.widget.Toolbar>
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/semi_white" />
 
     <ListView
         android:id="@+id/listMovies"

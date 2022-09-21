@@ -10,4 +10,7 @@
     <string name="movie_year_sample">1977</string>
     <string name="movie_genre_sample">sci-fi</string>
     <string name="add_new_movie">Add new movie</string>
+    <string name="delete_movie">Delete movie</string>
+    <string name="profile">Profile</string>
+    <string name="log_out">Log out</string>
 </resources>
