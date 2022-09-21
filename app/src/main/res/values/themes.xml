@@ -7,8 +7,8 @@
         <item name="colorOnPrimary">@color/semi_white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/dark</item>
-        <item name="colorSecondaryVariant">@color/cyan</item>
-        <item name="colorOnSecondary">@color/semi_white</item>
+        <item name="colorSecondaryVariant">@null</item>
+        <item name="colorOnSecondary">@color/dark</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/dark</item>
         <!-- Customize your theme here. -->

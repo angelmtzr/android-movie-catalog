@@ -15,8 +15,11 @@
         android:background="@color/light_blue"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@id/listMovies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/app_name"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
         app:titleTextColor="@color/semi_white" />
 
     <ListView

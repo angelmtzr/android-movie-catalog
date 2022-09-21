@@ -5,12 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.ImageView
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ListView
+import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
 import com.example.moviecatalog.movie.Movie
 import com.example.moviecatalog.movie.MovieListAdapter
+import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -36,6 +38,8 @@ class MovieCatalogActivity : AppCompatActivity() {
         // findViewById<ImageView>(R.id.btnHome).setOnClickListener { goBackToLogin() }
         // findViewById<ListView>(R.id.listMovies).setOnItemClickListener { adapterView, view, i, l -> }
 
+
+
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val movies = ArrayList<Movie>()
@@ -60,6 +64,25 @@ class MovieCatalogActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         goBackToLogin()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.profile -> {
+                // TODO("Show profile info")
+                true
+            }
+            R.id.logout -> {
+                goBackToLogin()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun goBackToLogin() {
