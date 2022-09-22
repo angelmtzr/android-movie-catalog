@@ -2,17 +2,15 @@ package com.example.moviecatalog
 
 import android.content.ContentValues.TAG
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.moviecatalog.movie.Movie
 import com.example.moviecatalog.movie.MovieListAdapter
-import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -38,16 +36,14 @@ class MovieCatalogActivity : AppCompatActivity() {
         // findViewById<ImageView>(R.id.btnHome).setOnClickListener { goBackToLogin() }
         // findViewById<ListView>(R.id.listMovies).setOnItemClickListener { adapterView, view, i, l -> }
 
-
-
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val movies = ArrayList<Movie>()
                 snapshot.children.forEach { child ->
-                    val movie = Movie(child.key.toString(),
-                        child.child("name").value.toString(),
-                        child.child("year").value.toString(),
-                        child.child("genre").value.toString())
+                    val movie = Movie(id=child.key.toString(),
+                        name=child.child("name").value.toString(),
+                        year=child.child("year").value.toString(),
+                        genre=child.child("genre").value.toString())
                     movies.add(movie)
                 }
                 val movieListAdapter = MovieListAdapter(this@MovieCatalogActivity, movies)
